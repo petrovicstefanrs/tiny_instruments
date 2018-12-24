@@ -1,0 +1,37 @@
+/* Media Queries */
+
+@mixin large_screen {
+  @media only screen and (max-width: 1210px) {
+    @content;
+  }
+}
+
+@mixin medium_screen {
+  @media only screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin small_screen {
+  @media only screen and (max-width: 601px) {
+    @content;
+  }
+}
+
+/* Cycle Buttons */
+
+@mixin button_background($dir) {
+	background: linear-gradient(
+		to $dir,
+		rgba(0, 0, 0, 0.1) 0%,
+		rgba(0, 0, 0, 0) 100%
+	);
+
+	&:hover {
+		background: linear-gradient(
+			to $dir,
+			rgba(0, 0, 0, 0.2) 0%,
+			rgba(0, 0, 0, 0) 100%
+		);
+	}
+}

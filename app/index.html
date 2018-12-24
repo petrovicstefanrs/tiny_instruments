@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title>Tiny Instruments</title>
+		<meta charset="UTF-8" />
+		<!--build:css css/styles.min.css-->
+		<link rel="stylesheet" type="text/css" href="styles/normalize.css">
+		<link rel="stylesheet" type="text/css" href="styles/main.css">
+		<!--endbuild-->
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+			integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+			crossorigin="anonymous"
+		/>
+	</head>
+
+	<body>
+		<div class="ti-Content">
+			<div class="ti-Content-instrument" id="instrumentIcon">
+				<audio src="" id="instrumentAudio"></audio>
+			</div>
+		</div>
+
+		<div class="ti-Controls">
+			<div class="ti-Button ti-Button-left" id="arrow-left">
+				<i class="fas fa-chevron-left"></i>
+			</div>
+			<div class="ti-Button ti-Button-right" id="arrow-right">
+				<i class="fas fa-chevron-right"></i>
+			</div>
+		</div>
+	</body>
+
+	<!--build:js js/main.min.js -->
+	<script src="scripts/main.js"></script>
+	<!-- endbuild -->
+</html>

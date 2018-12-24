@@ -1,0 +1,112 @@
+@import '_animations';
+@import '_variables';
+@import '_mixins';
+
+@import url('https://fonts.googleapis.com/css?family=Cutive+Mono');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700');
+
+// GLOBAL
+
+* {
+	font-size: $base_font;
+	box-sizing: border-box;
+}
+
+// CONTENT
+
+.ti-Content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	&-instrument {
+		width: $instrument_width;
+		height: $instrument_height;
+		background-size: contain;
+		cursor: pointer;
+		transition: all 0.5s ease-in-out;
+
+		&:hover {
+			transform: scale3d(1.5, 1.5, 1.5);
+		}
+	}
+}
+
+// CONTROLS
+
+.ti-Controls {
+	position: relative;
+	cursor: pointer;
+
+	.ti-Button {
+		height: 100vh;
+		width: 100px;
+		cursor: pointer;
+		position: absolute;
+		align-items: center;
+		justify-content: center;
+		display: flex;
+		font-size: 16px;
+		color: rgb(0, 0, 0);
+		opacity: 0.5;
+		transition: all 0.3s ease-in-out;
+
+		&-left {
+			left: 0;
+			@include button_background(right);
+		}
+
+		&-right {
+			right: 0;
+			@include button_background(left);
+		}
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+
+/* Start Instrument Animations */
+
+.ti-AnimationBody {
+	&-violin {
+		animation: background-anim-violin 21s infinite;
+	}
+
+	&-trumpet {
+		animation: background-anim-trumpet 3s infinite;
+	}
+
+	&-keyboard {
+		animation: background-anim-keyboard 10s infinite;
+	}
+
+	&-piano {
+		animation: background-anim-piano 7s infinite;
+	}
+
+	&-sax {
+		animation: background-anim-sax 20s infinite;
+	}
+
+	&-acoustic-guitar {
+		animation: background-anim-acoustic-guitar 10s infinite;
+	}
+
+	&-electric-guitar {
+		animation: background-anim-electric-guitar 4s infinite;
+	}
+}
+
+.ti-AnimationPulse {
+	animation-name: animation_pulse;
+	animation-duration: 5s;
+	animation-fill-mode: both;
+	animation-iteration-count: infinite;
+}

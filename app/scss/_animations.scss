@@ -1,0 +1,203 @@
+@keyframes background-anim-violin {
+	0% {
+		background-color: #ffffff;
+	}
+
+	80% {
+		background-color: rgb(0, 0, 0);
+	}
+
+	90% {
+		background-color: rgb(0, 0, 0);
+	}
+}
+
+@keyframes background-anim-trumpet {
+	0% {
+		background-color: #ffffff;
+	}
+
+	10% {
+		background-color: rgb(55, 0, 255);
+	}
+
+	20% {
+		background-color: rgb(255, 187, 0);
+	}
+
+	30% {
+		background-color: rgb(21, 255, 0);
+	}
+
+	40% {
+		background-color: rgb(111, 0, 255);
+	}
+
+	50% {
+		background-color: rgb(229, 255, 0);
+	}
+
+	60% {
+		background-color: rgb(0, 68, 255);
+	}
+
+	70% {
+		background-color: rgb(255, 0, 234);
+	}
+
+	80% {
+		background-color: rgb(0, 255, 255);
+	}
+
+	90% {
+		background-color: rgb(255, 0, 0);
+	}
+
+	100% {
+		background-color: rgb(0, 128, 0);
+	}
+}
+
+@keyframes background-anim-keyboard {
+	0% {
+		background-color: rgb(255, 255, 255);
+	}
+
+	30% {
+		background-color: rgb(97, 210, 255);
+	}
+
+	60% {
+		background-color: rgb(255, 132, 16);
+	}
+
+	100% {
+		background-color: rgb(255, 255, 255);
+	}
+}
+
+@keyframes background-anim-piano {
+	0% {
+		background-color: rgb(255, 255, 255);
+	}
+
+	40% {
+		background-color: rgb(30, 37, 102);
+	}
+
+	70% {
+		background-color: rgb(40, 31, 117);
+	}
+
+	100% {
+		background-color: rgb(255, 255, 255);
+	}
+}
+
+@keyframes background-anim-sax {
+	0% {
+		background-color: #ffffff;
+	}
+
+	10% {
+		background-color: rgb(55, 0, 255);
+	}
+
+	20% {
+		background-color: rgb(255, 187, 0);
+	}
+
+	30% {
+		background-color: rgb(21, 255, 0);
+	}
+
+	40% {
+		background-color: rgb(111, 0, 255);
+	}
+
+	90% {
+		background-color: rgb(255, 0, 0);
+	}
+
+	100% {
+		background-color: rgb(128, 0, 90);
+	}
+}
+
+@keyframes background-anim-acoustic-guitar {
+	0% {
+		background-color: rgb(255, 255, 255);
+	}
+
+	40% {
+		background-color: rgb(206, 20, 20);
+	}
+
+	70% {
+		background-color: rgb(0, 0, 0);
+	}
+
+	100% {
+		background-color: #ffffff;
+	}
+}
+
+@keyframes background-anim-electric-guitar {
+	0% {
+		background-color: rgb(255, 255, 255);
+	}
+
+	10% {
+		background-color: rgb(40, 40, 40);
+	}
+
+	20% {
+		background-color: rgb(0, 204, 255);
+	}
+
+	30% {
+		background-color: rgb(40, 40, 40);
+	}
+
+	40% {
+		background-color: rgb(0, 140, 255);
+	}
+
+	50% {
+		background-color: rgb(40, 40, 40);
+	}
+
+	60% {
+		background-color: rgb(0, 204, 255);
+	}
+
+	70% {
+		background-color: rgb(40, 40, 40);
+	}
+
+	80% {
+		background-color: rgb(0, 140, 255);
+	}
+
+	90% {
+		background-color: rgb(40, 40, 40);
+	}
+
+	100% {
+		background-color: #ffffff;
+	}
+}
+
+@keyframes animation_pulse {
+	0% {
+		transform: scale3d(1.5, 1.5, 1.5);
+	}
+
+	50% {
+		transform: scale3d(1, 1, 1);
+	}
+
+	100% {
+		transform: scale3d(1.5, 1.5, 1.5);
+	}
+}

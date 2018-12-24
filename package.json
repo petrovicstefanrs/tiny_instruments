@@ -1,0 +1,36 @@
+{
+	"name": "tiny_instruments",
+	"version": "1.0.0",
+	"description": "Just Tiny Instruments",
+	"main": "main.js",
+	"scripts": {
+		"start": "gulp"
+	},
+	"author": "Stefan Petrovic",
+	"license": "mit",
+	"devDependencies": {
+		"@babel/core": "^7.2.2",
+		"@babel/preset-env": "^7.2.3",
+		"autoprefixer": "^9.4.3",
+		"babel-preset-env": "^1.7.0",
+		"babelify": "^10.0.0",
+		"browser-sync": "^2.26.3",
+		"browserify": "^16.2.3",
+		"cssnano": "^4.1.8",
+		"del": "^2.2.2",
+		"gulp": "^3.9.1",
+		"gulp-babel": "^8.0.0",
+		"gulp-cache": "^0.4.6",
+		"gulp-cssnano": "^2.1.2",
+		"gulp-if": "^2.0.2",
+		"gulp-imagemin": "^3.2.0",
+		"gulp-postcss": "^8.0.0",
+		"gulp-rename": "^1.4.0",
+		"gulp-sass": "^4.0.2",
+		"gulp-uglify": "^2.1.2",
+		"gulp-useref": "^3.1.2",
+		"gulp-util": "^3.0.8",
+		"run-sequence": "^1.2.2",
+		"vinyl-source-stream": "^2.0.0"
+	}
+}
