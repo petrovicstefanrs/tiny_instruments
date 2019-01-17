@@ -8,6 +8,7 @@ const INSTRUMENTS_LIB = {
 		'violin',
 		'trumpet',
 		'keyboard',
+		'disco',
 		'piano',
 		'sax',
 		'acoustic-guitar',
