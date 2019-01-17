@@ -6,7 +6,7 @@
  * Set CONSTANTS
  */
 var INSTRUMENTS_LIB = {
-  instruments: ['violin', 'trumpet', 'keyboard', 'piano', 'sax', 'acoustic-guitar', 'electric-guitar']
+  instruments: ['violin', 'trumpet', 'keyboard', 'disco', 'piano', 'sax', 'acoustic-guitar', 'electric-guitar']
 };
 var CYCLE_DIRECTIONS = {
   left: 'left',
