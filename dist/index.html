@@ -1,7 +1,47 @@
 <html>
 	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=UA-132836721-1"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-132836721-1');
+		</script>
+
 		<title>Tiny Instruments</title>
 		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<meta name="description" content="Welcome to Tiny Instruments. Relax, listen to some catchy tunes and let them brighten up your day!">
+
+    	<meta name="keywords" content="Stefan, Petrović, Petrovic, tiny, instrument, instruments, violin, trumpet, keyboard, guitar, music, tunes, pop, culture, sounds">
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="images/favicon.png">
+
+		<!-- FB meta tags -->
+		<meta property="og:type"          content="website" />
+		<meta property="og:url"           content="https://www.petrovicstefan.rs" />
+		<meta property="og:title"         content="Tiny Instruments" />
+		<meta property="og:description"   content="Welcome to Tiny Instruments. Relax, listen to some catchy tunes and let them brighten up your day!" />
+		<meta property="og:image"         content="http://tinyinstruments.petrovicstefan.rs/images/socialpreview.png" />
+		<meta property="og:image:width" content="747" />
+		<meta property="og:image:height" content="200" />
+
+		<!-- Twiter meta tags -->
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@stefanpetr_dpi" />
+		<meta name="twitter:title" content="Tiny Instruments" />
+		<meta name="twitter:description" content="Welcome to Tiny Instruments. Relax, listen to some catchy tunes and let them brighten up your day!" />
+		<meta name="twitter:image" content="http://tinyinstruments.petrovicstefan.rs/images/socialpreview.png" />
+
 		<link rel="stylesheet" href="css/styles.min.css">
 		<link
 			rel="stylesheet"
@@ -82,7 +122,11 @@
 					/>
 				</span>
 				<span
-					>by <a href="https://github.com/InfinityNeo" target="_blank">@InfinityNeo</a> &
+					>by
+					<a href="https://github.com/InfinityNeo" target="_blank"
+						>@InfinityNeo</a
+					>
+					&
 					<a href="https://www.petrovicstefan.rs" target="_blank"
 						>@petrovicsterfanrs</a
 					></span
@@ -98,11 +142,35 @@
 
 			<div class="ti-Contact-form">
 				<label>Suggestion Box</label>
-				<span>Here you can suggest a new <strong>tiny instrument</strong> or just drop a few lines to <strong>say hello</strong>. Also, leave a <strong>name</strong> you would want us to <strong>display</strong> in case we <strong>choose your suggestion</strong>. <br><br><strong>Cheers!</strong></span>
-				<form method="post" action="https://helloforms.co/f/5c43b26d758af">
-					<input id="contactEmail" type="email" name="_email" placeholder="Your Email" required="required">
-					<textarea id="contactName" maxlength="300" name="_name" placeholder="Your Message" required="required"></textarea>
-					<input type="submit" value="Send">
+				<span
+					>Here you can suggest a new
+					<strong>tiny instrument</strong> or just drop a few lines to
+					<strong>say hello</strong>. Also, leave a
+					<strong>name</strong> you would want us to
+					<strong>display</strong> in case we
+					<strong>choose your suggestion</strong>. <br /><br /><strong
+						>Cheers!</strong
+					></span
+				>
+				<form
+					method="post"
+					action="https://helloforms.co/f/5c43b26d758af"
+				>
+					<input
+						id="contactEmail"
+						type="email"
+						name="_email"
+						placeholder="Your Email"
+						required="required"
+					/>
+					<textarea
+						id="contactName"
+						maxlength="300"
+						name="_name"
+						placeholder="Your Message"
+						required="required"
+					></textarea>
+					<input type="submit" value="Send" />
 				</form>
 			</div>
 			<div id="contactOverlay" class="ti-Contact-overlay"></div>
