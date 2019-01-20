@@ -53,8 +53,14 @@ gulp.task('sass', () => {
 });
 
 gulp.task('babel', () => {
+	const entries = [
+		'app/js/main.js',
+		'app/js/splash.js',
+		'app/js/contact.js',
+	];
+
 	browserify({
-		entries: 'app/js/main.js',
+		entries: entries,
 		debug: true,
 	})
 		.transform(babelify, { presets: ['@babel/preset-env'] })

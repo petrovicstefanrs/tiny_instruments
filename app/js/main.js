@@ -12,6 +12,7 @@ const INSTRUMENTS_LIB = {
 		'sax',
 		'acoustic-guitar',
 		'electric-guitar',
+		'disco',
 	],
 };
 
@@ -20,7 +21,7 @@ const CYCLE_DIRECTIONS = {
 	right: 'right',
 };
 
-const BASE_IMAGE = './images/';
+const BASE_IMAGE = './images/instruments/';
 const BASE_SOUND = './music/';
 
 /**
@@ -30,38 +31,39 @@ const BASE_SOUND = './music/';
 
 let instrumentNumber = 0;
 let instrumentActive = false;
-let instrumentAudio = document.getElementById('instrumentAudio');
-let instrumentIcon = document.getElementById('instrumentIcon');
+let oldInstrumentClass = null;
+const instrumentAudio = document.getElementById('instrumentAudio');
+const instrumentIcon = document.getElementById('instrumentIcon');
 
-const pulseAnimation = 'ti-AnimationPulse';
-const bodyAnimation = 'ti-AnimationBody';
+const instrumentBackground = 'ti-Content';
+const instrumentPlaying = 'ti-Content-instrument-playing';
 
 const setContent = () => {
 	instrumentIcon.style.backgroundImage = `url(${BASE_IMAGE}${
 		INSTRUMENTS_LIB.instruments[instrumentNumber]
-	}.png)`;
+	}.svg)`;
 
 	instrumentAudio.src = `${BASE_SOUND}${
 		INSTRUMENTS_LIB.instruments[instrumentNumber]
 	}.mp3`;
+
+	let newInstrumentClass = `${instrumentBackground}-${INSTRUMENTS_LIB.instruments[instrumentNumber]}`;
+	oldInstrumentClass
+		? instrumentIcon.parentElement.classList.replace(oldInstrumentClass,newInstrumentClass)
+		: instrumentIcon.parentElement.classList.add(oldInstrumentClass,newInstrumentClass);
+	oldInstrumentClass = newInstrumentClass;
 };
 
 const stopInstrument = () => {
 	instrumentActive = false;
-	instrumentIcon.classList.remove(pulseAnimation);
-	document.body.classList.remove(
-		`${bodyAnimation}-${INSTRUMENTS_LIB.instruments[instrumentNumber]}`
-	);
+	instrumentIcon.classList.remove(instrumentPlaying);
 	instrumentAudio.pause();
 	instrumentAudio.currentTime = 0;
 };
 
 const startInstrument = () => {
 	if (!instrumentActive) {
-		instrumentIcon.classList.add(pulseAnimation);
-		document.body.classList.add(
-			`${bodyAnimation}-${INSTRUMENTS_LIB.instruments[instrumentNumber]}`
-		);
+		instrumentIcon.classList.add(instrumentPlaying);
 		instrumentAudio.loop = true;
 		instrumentAudio.play();
 		instrumentActive = !instrumentActive;

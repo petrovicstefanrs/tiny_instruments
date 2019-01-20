@@ -3,13 +3,110 @@
 @import '_mixins';
 
 @import url('https://fonts.googleapis.com/css?family=Cutive+Mono');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,700,900');
 
 // GLOBAL
 
 * {
-	font-size: $base_font;
+	font-family: 'Roboto', sans-serif;
 	box-sizing: border-box;
+	color: $text_color;
+}
+
+// Attribution
+
+.ti-Attribution {
+	position: absolute;
+	font-size: 0.5em;
+	z-index: 9999;
+	pointer-events: all;
+	bottom: 2px;
+	right: 20px;
+}
+
+// Frame
+
+.ti-Frame {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 11;
+	pointer-events: none;
+
+	&-borders {
+		div {
+			background: url('../images/border.svg') repeat-x 50% 50%;
+			width: 100%;
+			height: 20px;
+			position: absolute;
+			left: 0;
+			top: 0;
+
+			&:nth-child(2),
+			&:nth-child(4) {
+				width: 20px;
+				height: 100%;
+				background: url('../images/border-vert.svg') repeat-y 50% 50%;
+			}
+
+			&:nth-child(3),
+			&:nth-child(4) {
+				transform: rotate(180deg);
+			}
+
+			&:nth-child(3) {
+				bottom: 0;
+				top: auto;
+			}
+
+			&:nth-child(4) {
+				right: 0;
+				left: auto;
+			}
+		}
+	}
+
+	&-corners {
+		div {
+			&:before,
+			&:after {
+				content: '';
+				background: url('../images/corner.svg') no-repeat center center;
+				width: 50px;
+				height: 50px;
+				position: absolute;
+				left: 10px;
+				top: 11px;
+			}
+
+			&:first-child {
+				&::after {
+					transform: rotate(90deg);
+					left: auto;
+					right: 10px;
+					top: 11px;
+				}
+			}
+
+			&:nth-child(2) {
+				&:before {
+					left: auto;
+					right: 10px;
+					top: auto;
+					bottom: 11px;
+					transform: rotate(180deg);
+				}
+
+				&:after {
+					top: auto;
+					bottom: 11px;
+					transform: rotate(270deg);
+				}
+			}
+		}
+	}
 }
 
 // CONTENT
@@ -23,6 +120,7 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
+	transition: background-color 0.5s ease-in-out;
 
 	&-instrument {
 		width: $instrument_width;
@@ -34,6 +132,42 @@
 		&:hover {
 			transform: scale3d(1.5, 1.5, 1.5);
 		}
+
+		&-playing {
+			animation: animation_pulse 2s ease-in-out 0s both infinite;
+		}
+	}
+
+	&-violin {
+		background-color: $bg_violin;
+	}
+
+	&-trumpet {
+		background-color: $bg_trumpet;
+	}
+
+	&-keyboard {
+		background-color: $bg_keyboard;
+	}
+
+	&-piano {
+		background-color: $bg_piano;
+	}
+
+	&-sax {
+		background-color: $bg_sax;
+	}
+
+	&-acoustic-guitar {
+		background-color: $bg_acoustic-guitar;
+	}
+
+	&-electric-guitar {
+		background-color: $bg_electric-guitar;
+	}
+
+	&-disco {
+		background-color: $bg_disco;
 	}
 }
 
@@ -45,16 +179,19 @@
 
 	.ti-Button {
 		height: 100vh;
-		width: 100px;
+		width: 150px;
 		cursor: pointer;
 		position: absolute;
 		align-items: center;
 		justify-content: center;
 		display: flex;
 		font-size: 16px;
-		color: rgb(0, 0, 0);
 		opacity: 0.5;
 		transition: all 0.3s ease-in-out;
+
+		.fas {
+			color: rgb(255, 255, 255);
+		}
 
 		&-left {
 			left: 0;
@@ -72,41 +209,21 @@
 	}
 }
 
-/* Start Instrument Animations */
+/* Github Ribbon */
 
-.ti-AnimationBody {
-	&-violin {
-		animation: background-anim-violin 21s infinite;
+.ti-GithubRibbon-octo {
+	svg {
+		fill: $link_color_1;
+		color: #fff;
+		position: absolute;
+		top: 0;
+		border: 0;
+		right: 0;
+		z-index: 9999;
 	}
 
-	&-trumpet {
-		animation: background-anim-trumpet 3s infinite;
+	&-arm,
+	&-body {
+		fill: #fff;
 	}
-
-	&-keyboard {
-		animation: background-anim-keyboard 10s infinite;
-	}
-
-	&-piano {
-		animation: background-anim-piano 7s infinite;
-	}
-
-	&-sax {
-		animation: background-anim-sax 20s infinite;
-	}
-
-	&-acoustic-guitar {
-		animation: background-anim-acoustic-guitar 10s infinite;
-	}
-
-	&-electric-guitar {
-		animation: background-anim-electric-guitar 4s infinite;
-	}
-}
-
-.ti-AnimationPulse {
-	animation-name: animation_pulse;
-	animation-duration: 5s;
-	animation-fill-mode: both;
-	animation-iteration-count: infinite;
 }

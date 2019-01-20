@@ -1,192 +1,10 @@
-@keyframes background-anim-violin {
-	0% {
-		background-color: #ffffff;
-	}
+@import '_variables';
 
-	80% {
-		background-color: rgb(0, 0, 0);
-	}
-
-	90% {
-		background-color: rgb(0, 0, 0);
-	}
-}
-
-@keyframes background-anim-trumpet {
-	0% {
-		background-color: #ffffff;
-	}
-
-	10% {
-		background-color: rgb(55, 0, 255);
-	}
-
-	20% {
-		background-color: rgb(255, 187, 0);
-	}
-
-	30% {
-		background-color: rgb(21, 255, 0);
-	}
-
-	40% {
-		background-color: rgb(111, 0, 255);
-	}
-
-	50% {
-		background-color: rgb(229, 255, 0);
-	}
-
-	60% {
-		background-color: rgb(0, 68, 255);
-	}
-
-	70% {
-		background-color: rgb(255, 0, 234);
-	}
-
-	80% {
-		background-color: rgb(0, 255, 255);
-	}
-
-	90% {
-		background-color: rgb(255, 0, 0);
-	}
-
-	100% {
-		background-color: rgb(0, 128, 0);
-	}
-}
-
-@keyframes background-anim-keyboard {
-	0% {
-		background-color: rgb(255, 255, 255);
-	}
-
-	30% {
-		background-color: rgb(97, 210, 255);
-	}
-
-	60% {
-		background-color: rgb(255, 132, 16);
-	}
-
-	100% {
-		background-color: rgb(255, 255, 255);
-	}
-}
-
-@keyframes background-anim-piano {
-	0% {
-		background-color: rgb(255, 255, 255);
-	}
-
-	40% {
-		background-color: rgb(30, 37, 102);
-	}
-
-	70% {
-		background-color: rgb(40, 31, 117);
-	}
-
-	100% {
-		background-color: rgb(255, 255, 255);
-	}
-}
-
-@keyframes background-anim-sax {
-	0% {
-		background-color: #ffffff;
-	}
-
-	10% {
-		background-color: rgb(55, 0, 255);
-	}
-
-	20% {
-		background-color: rgb(255, 187, 0);
-	}
-
-	30% {
-		background-color: rgb(21, 255, 0);
-	}
-
-	40% {
-		background-color: rgb(111, 0, 255);
-	}
-
-	90% {
-		background-color: rgb(255, 0, 0);
-	}
-
-	100% {
-		background-color: rgb(128, 0, 90);
-	}
-}
-
-@keyframes background-anim-acoustic-guitar {
-	0% {
-		background-color: rgb(255, 255, 255);
-	}
-
-	40% {
-		background-color: rgb(206, 20, 20);
-	}
-
-	70% {
-		background-color: rgb(0, 0, 0);
-	}
-
-	100% {
-		background-color: #ffffff;
-	}
-}
-
-@keyframes background-anim-electric-guitar {
-	0% {
-		background-color: rgb(255, 255, 255);
-	}
-
-	10% {
-		background-color: rgb(40, 40, 40);
-	}
-
-	20% {
-		background-color: rgb(0, 204, 255);
-	}
-
-	30% {
-		background-color: rgb(40, 40, 40);
-	}
-
-	40% {
-		background-color: rgb(0, 140, 255);
-	}
-
-	50% {
-		background-color: rgb(40, 40, 40);
-	}
-
-	60% {
-		background-color: rgb(0, 204, 255);
-	}
-
-	70% {
-		background-color: rgb(40, 40, 40);
-	}
-
-	80% {
-		background-color: rgb(0, 140, 255);
-	}
-
-	90% {
-		background-color: rgb(40, 40, 40);
-	}
-
-	100% {
-		background-color: #ffffff;
-	}
-}
+/**
+ * ----------------------------------------
+ * animation pulse
+ * ----------------------------------------
+ */
 
 @keyframes animation_pulse {
 	0% {
@@ -199,5 +17,156 @@
 
 	100% {
 		transform: scale3d(1.5, 1.5, 1.5);
+	}
+}
+
+/**
+ * ----------------------------------------
+ * animation vibrate
+ * ----------------------------------------
+ */
+
+@keyframes animation_vibrate {
+	0% {
+		transform: translate(0);
+	}
+	20% {
+		transform: translate(-2px, 2px);
+	}
+	40% {
+		transform: translate(-2px, -2px);
+	}
+	60% {
+		transform: translate(2px, 2px);
+	}
+	80% {
+		transform: translate(2px, -2px);
+	}
+	100% {
+		transform: translate(0);
+	}
+}
+
+/** ----------------------------------------
+ * animation spin
+ * ----------------------------------------
+ */
+
+@keyframes animation_spin {
+	0% {
+		transform: rotate(0deg);
+		box-shadow: -1.5px 1.5px 1.5px $link_color_2,
+			inset 1.5px -1.5px 1.5px $link_color_2;
+		border: $link_color_2;
+	}
+
+	33% {
+		transform: rotate(120deg);
+		box-shadow: -1.5px 1.5px 6px $link_color_1,
+			inset 1.5px -1.5px 5px $link_color_1;
+		border: $link_color_1;
+	}
+
+	66% {
+		transform: rotate(240deg);
+		box-shadow: -1.5px 1.5px 1.5px $link_color_1,
+			inset 1.5px -1.5px 1.5px $link_color_1;
+		border: $link_color_1;
+	}
+	100% {
+		transform: rotate(360deg);
+		box-shadow: -1.5px 1.5px 1.5px $link_color_2,
+			inset 1.5px -1.5px 1.5px $link_color_2;
+		border: $link_color_2;
+	}
+}
+
+/** ----------------------------------------
+ * animation fade out - bottom
+ * ----------------------------------------
+ */
+
+@keyframes animation_fade-out-bottom {
+	0% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(50px);
+		opacity: 0;
+	}
+}
+
+/** ----------------------------------------
+ * animation swing out - top back
+ * ----------------------------------------
+ */
+
+@keyframes animation_swing-out-top-bck {
+	0% {
+		transform: rotateX(0deg);
+		transform-origin: top;
+		opacity: 1;
+	}
+	100% {
+		transform: rotateX(-100deg);
+		transform-origin: top;
+		opacity: 0;
+	}
+}
+
+/** ----------------------------------------
+ * animation fade out - back
+ * ----------------------------------------
+ */
+
+@keyframes animation_fade-out-bck {
+	0% {
+		transform: translateZ(0);
+		opacity: 1;
+	}
+	100% {
+		transform: translateZ(-80px);
+		opacity: 0;
+	}
+}
+
+/** ----------------------------------------
+ * animation slide in blured - bottom left
+ * ----------------------------------------
+ */
+
+@keyframes animation_slide-in-blurred-bl {
+	0% {
+		transform: translate(-1000px, 1000px) skew(-80deg, -10deg);
+		transform-origin: 100% 100%;
+		filter: blur(40px);
+		opacity: 0;
+	}
+	100% {
+		transform: translate(0, 0) skew(0deg, 0deg);
+		transform-origin: 50% 50%;
+		filter: blur(0);
+		opacity: 1;
+	}
+}
+
+/** ----------------------------------------
+ * animation slide out blured - bottom left
+ * ----------------------------------------
+ */
+
+@keyframes animation_slide-out-blurred-bl {
+	0% {
+		transform: translate(0, 0) skew(0deg, 0deg);
+		transform-origin: 50% 50%;
+		filter: blur(0);
+		opacity: 1;
+	}
+	100% {
+		transform: translate(-1000px, 1000px) skew(-80deg, -10deg);
+		transform-origin: 100% 100%;
+		filter: blur(40px);
+		opacity: 0;
 	}
 }

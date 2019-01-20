@@ -1,21 +1,21 @@
 /* Media Queries */
 
 @mixin large_screen {
-  @media only screen and (max-width: 1210px) {
-    @content;
-  }
+	@media only screen and (max-width: 1210px) {
+		@content;
+	}
 }
 
 @mixin medium_screen {
-  @media only screen and (max-width: 992px) {
-    @content;
-  }
+	@media only screen and (max-width: 992px) {
+		@content;
+	}
 }
 
 @mixin small_screen {
-  @media only screen and (max-width: 601px) {
-    @content;
-  }
+	@media only screen and (max-width: 601px) {
+		@content;
+	}
 }
 
 /* Cycle Buttons */

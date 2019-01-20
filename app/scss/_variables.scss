@@ -1,7 +1,25 @@
 /* Fonts */
+
 $base_font: 16px;
 
 /* Colors */
 
-$instrument_width: 32px;
-$instrument_height: 32px;
+$text_color: #31322f;
+$link_color_1: #e09938;
+$link_color_2: #e74250;
+
+/* Instruments */
+
+$instrument_width: 48px;
+$instrument_height: 48px;
+
+/* Instrument Background Colors */
+
+$bg_violin: rgb(87, 104, 188);
+$bg_trumpet: rgb(111, 0, 255);
+$bg_keyboard: rgb(103, 100, 241);
+$bg_piano:rgb(43, 44, 42);
+$bg_sax:rgb(113, 68, 83);
+$bg_acoustic-guitar: rgb(43, 107, 189);
+$bg_electric-guitar:rgb(59, 42, 90);
+$bg_disco:rgb(207, 147, 57);
