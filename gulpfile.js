@@ -57,6 +57,7 @@ gulp.task('babel', () => {
 		'app/js/main.js',
 		'app/js/splash.js',
 		'app/js/contact.js',
+		'app/js/subscribe.js',
 	];
 
 	browserify({

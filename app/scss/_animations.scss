@@ -170,3 +170,44 @@
 		opacity: 0;
 	}
 }
+
+
+/** ----------------------------------------
+ * animation slide in blured - bottom right
+ * ----------------------------------------
+ */
+
+ @keyframes animation_slide-in-blurred-br {
+	0% {
+		transform: translate(1000px, 1000px) skew(80deg, 10deg);
+		transform-origin: 100% 100%;
+		filter: blur(40px);
+		opacity: 0;
+	}
+	100% {
+		transform: translate(0, 0) skew(0deg, 0deg);
+		transform-origin: 50% 50%;
+		filter: blur(0);
+		opacity: 1;
+	}
+}
+
+/** ----------------------------------------
+ * animation slide out blured - bottom right
+ * ----------------------------------------
+ */
+
+@keyframes animation_slide-out-blurred-br {
+	0% {
+		transform: translate(0, 0) skew(0deg, 0deg);
+		transform-origin: 50% 50%;
+		filter: blur(0);
+		opacity: 1;
+	}
+	100% {
+		transform: translate(1000px, 1000px) skew(80deg, 10deg);
+		transform-origin: 100% 100%;
+		filter: blur(40px);
+		opacity: 0;
+	}
+}
