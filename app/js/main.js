@@ -110,6 +110,30 @@ BUTTON_RIGHT.addEventListener('click', () =>
 	cycleInstruments(CYCLE_DIRECTIONS.right)
 );
 
+  /**
+	 * KEYBOARD CONTROL HANDLER
+	 * Handles keyboard controls for play/stop and navigation 
+	 */
+import { splashScreenActive, handleSplashScreen } from "./splash";
+
+window.addEventListener("keydown", (e) => {
+	if (e.keyCode === 32) {		
+		if(splashScreenActive) {
+			handleSplashScreen();
+		} else {
+			startInstrument();
+		};
+	}
+
+	if (e.keyCode === 37) {
+		cycleInstruments(CYCLE_DIRECTIONS.left);
+	}
+
+	if (e.keyCode === 39) {
+		cycleInstruments(CYCLE_DIRECTIONS.right);
+	}
+});
+
 /**
  * INIT
  * Initialize the app
