@@ -41,16 +41,16 @@ const instrumentPlaying = 'ti-Content-instrument-playing';
 const setContent = () => {
 	instrumentIcon.style.backgroundImage = `url(${BASE_IMAGE}${
 		INSTRUMENTS_LIB.instruments[instrumentNumber]
-	}.svg)`;
+		}.svg)`;
 
 	instrumentAudio.src = `${BASE_SOUND}${
 		INSTRUMENTS_LIB.instruments[instrumentNumber]
-	}.mp3`;
+		}.mp3`;
 
 	let newInstrumentClass = `${instrumentBackground}-${INSTRUMENTS_LIB.instruments[instrumentNumber]}`;
 	oldInstrumentClass
-		? instrumentIcon.parentElement.classList.replace(oldInstrumentClass,newInstrumentClass)
-		: instrumentIcon.parentElement.classList.add(oldInstrumentClass,newInstrumentClass);
+		? instrumentIcon.parentElement.classList.replace(oldInstrumentClass, newInstrumentClass)
+		: instrumentIcon.parentElement.classList.add(oldInstrumentClass, newInstrumentClass);
 	oldInstrumentClass = newInstrumentClass;
 };
 
@@ -109,6 +109,31 @@ BUTTON_LEFT.addEventListener('click', () =>
 BUTTON_RIGHT.addEventListener('click', () =>
 	cycleInstruments(CYCLE_DIRECTIONS.right)
 );
+
+/**
+   * KEYBOARD CONTROL HANDLER
+   * Handles keyboard controls for play/stop and navigation 
+   */
+
+import { splashScreenActive, handleSplashScreen } from './splash';
+
+window.addEventListener('keydown', (e) => {
+	if (e.keyCode === 32) {
+		if (splashScreenActive) {
+			handleSplashScreen();
+		} else {
+			startInstrument();
+		};
+	}
+
+	if (e.keyCode === 37) {
+		cycleInstruments(CYCLE_DIRECTIONS.left);
+	}
+
+	if (e.keyCode === 39) {
+		cycleInstruments(CYCLE_DIRECTIONS.right);
+	}
+});
 
 /**
  * INIT
